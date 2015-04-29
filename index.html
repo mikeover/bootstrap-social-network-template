@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Dobble Social Network</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,11 +14,34 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
   </head>
 
   <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <header>
+      <div class="container">
+	<img src="img/logo.png" class="logo"/>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+	    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+	  </div>
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputPassword3">Password</label>
+	    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+	  </div>
+	  <button type="submit" class="btn btn-default">Sign in</button>
+	  <br/>
+	  <div class="checkbox">
+	    <label>
+	      <input type="checkbox"> Remember me
+	    </label>
+	  </div>
+	</form>      
+      </div>
+    </header>
+    <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -27,21 +50,257 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="groups.html">Groups</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="profile.html">Profile</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <section>
+      <div class="container">
+	<div class="row">
+	  <div class="col-md-8">
+	    <div class="panel panel-default">
+	      <div class="panel-heading">
+		<h3 class="panel-title">Wall</h3>
+	      </div>
+	      <div class="panel-body">
+		<form>
+		  <div class="form-group">
+		    <textarea class="form-control" placeholder="Write on the wall"></textarea>
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		  <div class="pull-right">
+		    <div class="btn-group">
+		      <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Text</button>
+		      <button type="button" class="btn btn-default"><i class="fa fa-file-image-o"></i> Image</button>
+		      <button type="button" class="btn btn-default"><i class="fa fa-file-video-o"></i> Video</button>
+		    </div>
+		  </div> <!-- pull-right -->
+		</form>
+	      </div> <!-- panel body -->
+	    </div> <!-- panel -->
 
+	    <div class="panel panel-default post">
+	      <div class="panel-body">
+		<div class="row">
+		  <div class="col-sm-2">
+		    <a class="post-avatar thumbnail" href="profile.html"><img src="img/user.png"/><div class="text-center">DevUser1</div></a>
+		    <div class="likes text-center">7 Likes</div>
+		  </div> <!-- col sm 2 -->
+
+		  <div class="col-sm-10">
+		    <div class="bubble">
+		      <div class="pointer">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat, magna ornare euismod consectetur, dolor arcu finibus erat, in finibus ex elit quis nunc. Aliquam erat volutpat. Cras posuere feugiat ligula nec lacinia. Suspendisse potenti. Quisque venenatis tincidunt magna, non molestie turpis. Vestibulum sagittis enim maximus sapien maximus vehicula. Aenean et condimentum ligula, id venenatis metus. 
+		      </div> <!-- pointer -->
+		      <div class="pointer-border"></div>
+		    </div> <!-- bubble -->
+		    <p class="post-actions">
+		      <a href="#">Like</a> - <a href="#">Follow</a> - <a href="#">Share</a>
+		    </p> <!-- post-actions -->
+		    <div class="comment-form">
+		      <form class="form-inline">
+			<div class="form-group">
+			  <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Comment">
+			</div>
+			<button type="submit" class="btn btn-default">Add</button>
+		      </form>
+		    </div> <!-- comment-form -->
+		    <div class="clearfix"></div> <!-- to clear all floats -->
+		    
+		    <div class="comments">
+		      <div class="comment">
+			<a href="#" class="comment-avatar pull-left"><img src="img/user.png"/></a>
+			<div class="comment-text">
+			  Nam eu eros tristique, feugiat augue ac, commodo nunc. Suspendisse consequat facilisis ante in sodales.
+			</div> <!-- comment-text -->
+		      </div> <!-- comment -->
+		      <div class="clearfix"></div> <!-- clear floats -->
+		      <div class="comment">
+			<a href="#" class="comment-avatar pull-left"><img src="img/user.png"/></a>
+			<div class="comment-text">
+			  Donec viverra aliquam est quis aliquam. Donec aliquam tortor ac nulla aliquet, id cursus dui mattis. 
+			</div> <!-- comment-text -->
+		      </div> <!-- comment -->
+		      <div class="clearfix"></div> <!-- clear floats -->
+		    </div> <!-- comments -->
+
+		  </div> <!-- col sm 10 -->
+		</div> <!-- row -->
+	      </div> <!-- panel body -->
+	    </div> <!-- panel -->
+
+
+	    <div class="panel panel-default post">
+	      <div class="panel-body">
+		<div class="row">
+		  <div class="col-sm-2">
+		    <a class="post-avatar thumbnail" href="profile.html"><img src="img/user.png"/><div class="text-center">DevUser1</div></a>
+		    <div class="likes text-center">4 Likes</div>
+		  </div> <!-- col sm 2 -->
+
+		  <div class="col-sm-10">
+		    <div class="bubble">
+		      <div class="pointer">
+			Duis scelerisque, elit et consectetur blandit, augue nisi varius ipsum, eget elementum risus tortor eget leo. Aliquam aliquam interdum quam id accumsan. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti.
+		      </div> <!-- pointer -->
+		      <div class="pointer-border"></div>
+		    </div> <!-- bubble -->
+		    <p class="post-actions">
+		      <a href="#">Like</a> - <a href="#">Follow</a> - <a href="#">Share</a>
+		    </p> <!-- post-actions -->
+		    <div class="comment-form">
+		      <form class="form-inline">
+			<div class="form-group">
+			  <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Comment">
+			</div>
+			<button type="submit" class="btn btn-default">Add</button>
+		      </form>
+		    </div> <!-- comment-form -->
+		    <div class="clearfix"></div> <!-- to clear all floats -->
+		    
+		    <div class="comments">
+		      <div class="comment">
+			<a href="#" class="comment-avatar pull-left"><img src="img/user.png"/></a>
+			<div class="comment-text">
+			  Donec viverra aliquam est quis aliquam. Donec aliquam tortor ac nulla aliquet, id cursus dui mattis. 
+			</div> <!-- comment-text -->
+		      </div> <!-- comment -->
+		      <div class="clearfix"></div> <!-- clear floats -->
+		    </div> <!-- comments -->
+
+		  </div> <!-- col sm 10 -->
+		</div> <!-- row -->
+	      </div> <!-- panel body -->
+	    </div> <!-- panel -->
+
+
+
+	    <div class="panel panel-default post">
+	      <div class="panel-body">
+		<div class="row">
+		  <div class="col-sm-2">
+		    <a class="post-avatar thumbnail" href="profile.html"><img src="img/user.png"/><div class="text-center">DevUser1</div></a>
+		    <div class="likes text-center">13 Likes</div>
+		  </div> <!-- col sm 2 -->
+
+		  <div class="col-sm-10">
+		    <div class="bubble">
+		      <div class="pointer">
+			Phasellus vestibulum maximus arcu. Nulla id orci lectus. Praesent scelerisque nibh sit amet ipsum tempus rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean urna velit, ullamcorper at condimentum at, condimentum sit amet neque. 
+		      </div> <!-- pointer -->
+		      <div class="pointer-border"></div>
+		    </div> <!-- bubble -->
+		    <p class="post-actions">
+		      <a href="#">Like</a> - <a href="#">Follow</a> - <a href="#">Share</a>
+		    </p> <!-- post-actions -->
+		    <div class="comment-form">
+		      <form class="form-inline">
+			<div class="form-group">
+			  <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Comment">
+			</div>
+			<button type="submit" class="btn btn-default">Add</button>
+		      </form>
+		    </div> <!-- comment-form -->
+		    <div class="clearfix"></div> <!-- to clear all floats -->
+		    
+		    <div class="comments">
+		      <div class="comment">
+			<a href="#" class="comment-avatar pull-left"><img src="img/user.png"/></a>
+			<div class="comment-text">
+			  Nam eu eros tristique, feugiat augue ac, commodo nunc. Suspendisse consequat facilisis ante in sodales.
+			</div> <!-- comment-text -->
+		      </div> <!-- comment -->
+		      <div class="clearfix"></div> <!-- clear floats -->
+		      <div class="comment">
+			<a href="#" class="comment-avatar pull-left"><img src="img/user.png"/></a>
+			<div class="comment-text">
+			  Donec viverra aliquam est quis aliquam. Donec aliquam tortor ac nulla aliquet, id cursus dui mattis. 
+			</div> <!-- comment-text -->
+		      </div> <!-- comment -->
+		      <div class="clearfix"></div> <!-- clear floats -->
+		    </div> <!-- comments -->
+
+		  </div> <!-- col sm 10 -->
+		</div> <!-- row -->
+	      </div> <!-- panel body -->
+	    </div> <!-- panel -->
+
+
+
+
+	  </div> <!-- md 8 -->
+
+	  <!-- SIDEBAR -->
+	  <div class="col-md-4">
+	    <div class="panel panel-default friends">
+	      <div class="panel-heading">
+		<h3 class="panel-title">My Friends</h3>
+	      </div>
+	      <div class="panel-body">
+		<ul>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		  <li><a class="thumbnail" href="profile.html"><img src="img/user.png"/></a></li>
+		</ul>
+		<div class="clearfix"></div> <!-- clear floats -->
+		<a class="btn btn-primary" href="#">View All Friends</a>
+	      </div> <!-- panel-body -->
+	    </div> <!-- panel -->
+
+	    <div class="panel panel-default groups">
+	      <div class="panel-heading">
+		<h3 class="panel-title">Latest Groups</h3>
+	      </div>
+	      <div class="panel-body">
+		<div class="group-item">
+		  <img src="img/group.png"/>
+		  <h4><a href="#">Sample Group One</a></h4>
+		  <p>This is a Dobble social network sample group</p>
+		</div> <!-- group-item -->
+		<div class="clearfix"></div> <!-- clear floats -->
+		<div class="group-item">
+		  <img src="img/group.png"/>
+		  <h4><a href="#">Sample Group Two</a></h4>
+		  <p>This is a Dobble social network sample group</p>
+		</div> <!-- group-item -->
+		<div class="clearfix"></div> <!-- clear floats -->
+		<div class="group-item">
+		  <img src="img/group.png"/>
+		  <h4><a href="#">Sample Group Three</a></h4>
+		  <p>This is a Dobble social network sample group</p>
+		</div> <!-- group-item -->
+		<div class="clearfix"></div> <!-- clear floats -->
+		<a class="btn btn-primary" href="#">View All Groups</a>
+	      </div> <!-- panel body -->
+	    </div> <!-- groups panel -->
+
+	  </div> <!-- md 4 -->
+
+	</div> <!-- row -->
+      </div> <!-- container -->
     </section>
+
+    <footer>
+      <div class="container">
+	<p>Dobble Copyright &copy; 2015, All Rights Reserved</p>
+      </div> <!-- container -->
+    </footer>
 
 
     <!-- Bootstrap core JavaScript
