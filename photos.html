@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Dobble Social Network : Profile</title>
+    <title>Dobble Social Network : Photos</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,6 +14,9 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- http://ashleydw.github.io/lightbox/ -->
+    <!-- https://github.com/ashleydw/lightbox -->
+    <link href="css/ekko-lightbox.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
   </head>
@@ -56,8 +59,8 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="members.html">Members</a></li>
             <li><a href="groups.html">Groups</a></li>
-            <li><a href="photos.html">Photos</a></li>
-            <li class="active"><a href="profile.html">Profile</a></li>
+            <li class="active"><a href="photos.html">Photos</a></li>
+            <li><a href="profile.html">Profile</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -67,51 +70,28 @@
       <div class="container">
 	<div class="row">
 	  <div class="col-md-8">
-	    <div class="profile">
-	      <h1 class="page-header">John Doe</h1>
-	      <div class="row">
-		<div class="col-md-4">
-		  <img src="img/user.png" class="img-thumbnail"/>
-		</div> <!-- col md 4 -->
-		<div class="col-md-8">
-		  <ul>
-		    <li><strong>Name:</strong> John Doe</li>
-		    <li><strong>Email:</strong> johndoe@gmail.com</li>
-		    <li><strong>City:</strong> Boston</li>
-		    <li><strong>State:</strong> Massachusetts</li>
-		    <li><strong>Gender:</strong> Male</li>
-		    <li><strong>Profession:</strong> Web Developer</li>
-		  </ul>
-		</div> <!-- col md 8 -->
-	      </div> <!-- row -->
-
-	      <br/><br/>
-	      <div class="row">
-		<div class="col-md-12">
-		  <div class="panel panel-default">
-		    <div class="panel-heading">
-		      <h3 class="panel-title">Profile Wall</h3>
-		    </div>
-		    <div class="panel-body">
-		      <form>
-			<div class="form-group">
-			  <textarea class="form-control" placeholder="Write on the wall"></textarea>
-			</div>
-			<button type="submit" class="btn btn-default">Submit</button>
-			<div class="pull-right">
-			  <div class="btn-group">
-			    <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i> Text</button>
-			    <button type="button" class="btn btn-default"><i class="fa fa-file-image-o"></i> Image</button>
-			    <button type="button" class="btn btn-default"><i class="fa fa-file-video-o"></i> Video</button>
-			  </div>
-			</div> <!-- pull-right -->
-		      </form>
-		    </div> <!-- panel body -->
-		  </div> <!-- panel -->
-		</div> <!-- cold-md-12 -->
-	      </div> <!-- row -->
-
-	    </div> <!-- profile div -->
+	    <h1 class="page-header">Photos</h1>
+	    <ul class="photos gallery-parent">
+	      <!-- img-thumbnailbootstrap class to make border, etc. -->
+	      <li><a href="img/sample1.jpg" data-parent=".gallery-parent" data-gallery="my-gallery" data-title="Image One" data-footer="This is image one" data-toggle="lightbox" data-hover="tooltip" data-placement="top" title="Image One">
+		  <img src="img/sample1.jpg" class="img-thumbnail"/>
+	      </a></li> 
+	      <li><a href="img/sample2.jpg" data-parent=".gallery-parent" data-gallery="my-gallery" data-title="Image Two" data-footer="This is image two" data-toggle="lightbox" data-hover="tooltip" data-placement="top" title="Image Two">
+		  <img src="img/sample2.jpg" class="img-thumbnail"/>
+	      </a></li> 
+	      <li><a href="img/sample3.jpg" data-parent=".gallery-parent" data-gallery="my-gallery" data-title="Image Three" data-footer="This is image three" data-toggle="lightbox" data-hover="tooltip" data-placement="top" title="Image Three">
+		  <img src="img/sample3.jpg" class="img-thumbnail"/>
+	      </a></li> 
+	      <li><a href="img/sample4.jpg" data-parent=".gallery-parent" data-gallery="my-gallery" data-title="Image Four" data-footer="This is image four" data-toggle="lightbox" data-hover="tooltip" data-placement="top" title="Image Four">
+		  <img src="img/sample4.jpg" class="img-thumbnail"/>
+	      </a></li> 
+	      <li><a href="img/sample5.jpg" data-parent=".gallery-parent" data-gallery="my-gallery" data-title="Image Five" data-footer="This is image five" data-toggle="lightbox" data-hover="tooltip" data-placement="top" title="Image Five">
+		  <img src="img/sample5.jpg" class="img-thumbnail"/>
+	      </a></li> 
+	      <li><a href="img/sample6.jpg" data-parent=".gallery-parent" data-gallery="my-gallery" data-title="Image Six" data-footer="This is image six" data-toggle="lightbox" data-hover="tooltip" data-placement="top" title="Image Six">
+		  <img src="img/sample6.jpg" class="img-thumbnail"/>
+	      </a></li> 
+	    </ul>
 	  </div> <!-- md 8 -->
 
 	  <!-- SIDEBAR -->
@@ -183,5 +163,16 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!-- for modal lightbox -->
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script>
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+      }); 
+      $(function () {
+      $('[data-hover="tooltip"]').tooltip()
+      })    
+    </script>
   </body>
 </html>
